@@ -9,7 +9,8 @@ function App() {
     setNewTodo(event.target.value);
   };
 
-  const addTodo = () => {
+  const addTodo = (event) => {
+    event.preventDefault();
     if (newTodo.trim() !== '') {
       const todoObj = {
         id: todoList.length === 0 ? 1 : todoList[todoList.length - 1].id + 1,
@@ -35,13 +36,15 @@ function App() {
       <div className='container'>
         <div className='addTask'>
           <h1>Add Task</h1>
-          <input
+         <form onSubmit={addTodo}>
+         <input
             type='text'
             id='input'
             placeholder='Enter task here...'
             value={newTodo}
             onChange={todoInput}
           />
+         </form>
           <div className='btns'>
             <button onClick={addTodo}>+</button>
             <button onClick={clearList}>Clear</button>

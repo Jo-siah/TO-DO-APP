@@ -25,30 +25,36 @@
     width: 100%;
     background-color: rgb(108, 108, 237);
     display: flex;
-    gap: 1rem;
-    justify-content: center;
+    justify-content:space-around;
     align-items: center;
     flex-direction: column;
     border-radius: 10px;
-    padding: 10px 0px;
+
 }
-.addTask>input{
-    padding: 10px;
+form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+form>input{
+    padding: 5px;
     width: 80%;
+    font-size: .7rem;
 }
 .addTask>h1{
     color: white;
     font-weight: 800;
+    font-size: 1.5rem;
 }
 .btns>button{
-    padding: 8px;
-    font-size: 16px;
+    padding: 5px;
+    font-size: 15px;
     border-top-right-radius: 5px;
     border-bottom-left-radius: 5px;
     border: none;
     color: white;
     background-color:rgb(11, 11, 49) ;
-    width: 70px;
+    width: 65px;
     cursor: pointer;
     margin-right: 10px;
 }
@@ -62,7 +68,7 @@
 }
 .Todos{
     width: 100%;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0,0,0,0.6);
     margin-top: 10px;
     padding: 10px 30px;
     display: flex;
@@ -91,17 +97,16 @@
 }
 @media (max-width:480px){
     .container{
-        width: 85%;
+        width: 90%;
 
     }.addTask{
         height: 20vh;
-        gap: 0.8rem;
     }
-    .addTask>input{
-        padding: 5px;
+    form>input{
+        padding: 7px;
     }
     .addTask>h1{
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
     .addTask>button{
         padding: 3px;
